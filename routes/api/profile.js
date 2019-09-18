@@ -25,7 +25,7 @@ router.get('/me', auth, async (req, res) => {
 
 router.post('/', [ auth, [
     check('status', 'Status is required').not().isEmpty(),
-    check('skills', 'Skills is required').not().isEmpty()
+    check('skills', 'Skills are required').not().isEmpty()
 ]], async (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
