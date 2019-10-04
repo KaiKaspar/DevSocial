@@ -12,11 +12,7 @@ const User = require('../../models/User')
 router.post('/', [
     check('name', 'Name is required').not().isEmpty(),
     check('email', 'Please include valid email').isEmail(),
-    check('password')
-        .isLength({min: 7})
-        .withMessage('Password must be 7 or more characters')
-        .isAlphanumeric()
-        .withMessage('Password must be contain letters and numbers')
+    check('password', 'Password must be at least 7 characters, contain upper and lowercase and include a number').matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)
 ], async (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
