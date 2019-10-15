@@ -99,7 +99,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
                 <div className="form-group">
                 <input type="text" placeholder="Website" name="website" value={website} onChange={e => onChange(e)}/>
                 <small className="form-text"
-                    >Could be your own or a company website. * please include 'https://'</small>
+                    >Could be your own or a company website</small>
                 </div>
                 <div className="form-group">
                 <input type="text" placeholder="Location" name="location" value={location} onChange={e => onChange(e)}/>
@@ -135,7 +135,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
                 <button onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
                     Add Social Network Links
                 </button>
-                <span>Optional (please include 'https://')</span>
+                <span>Optional</span>
                 </div>
 
                 {displaySocialInputs && <Fragment>
