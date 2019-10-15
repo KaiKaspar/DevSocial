@@ -80,7 +80,7 @@ const CreateProfile = ({createProfile, history}) => {
                 <div className="form-group">
                 <input type="text" placeholder="Website" name="website" value={website} onChange={e => onChange(e)}/>
                 <small className="form-text"
-                    >Could be your own or a company website</small
+                >Could be your own or a company website. * please include 'https://'</small
                 >
                 </div>
                 <div className="form-group">
@@ -117,7 +117,7 @@ const CreateProfile = ({createProfile, history}) => {
                 <button onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
                     Add Social Network Links
                 </button>
-                <span>Optional</span>
+                <span>Optional (please include 'https://')</span>
                 </div>
 
                 {displaySocialInputs && <Fragment>

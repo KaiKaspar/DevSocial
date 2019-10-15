@@ -66,7 +66,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
     return (
         <Fragment>
             <h1 className="large text-primary">
-                Create Your Profile
+                Edit Your Profile
             </h1>
             <p className="lead">
                 <i className="fas fa-user"></i> Let's get some information to make your
@@ -99,8 +99,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
                 <div className="form-group">
                 <input type="text" placeholder="Website" name="website" value={website} onChange={e => onChange(e)}/>
                 <small className="form-text"
-                    >Could be your own or a company website</small
-                >
+                    >Could be your own or a company website. * please include 'https://'</small>
                 </div>
                 <div className="form-group">
                 <input type="text" placeholder="Location" name="location" value={location} onChange={e => onChange(e)}/>
@@ -136,7 +135,7 @@ const EditProfile = ({ profile: { profile, loading }, createProfile, getCurrentP
                 <button onClick={() => toggleSocialInputs(!displaySocialInputs)} type="button" className="btn btn-light">
                     Add Social Network Links
                 </button>
-                <span>Optional</span>
+                <span>Optional (please include 'https://')</span>
                 </div>
 
                 {displaySocialInputs && <Fragment>
