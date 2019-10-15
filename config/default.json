@@ -1,6 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://Kaspar:Password1@kaidev-cmrhg.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "mysecrettoken",
-  "githubClientId": "226e3cf1fcb8b78d49b5",
-  "githubSecret": "45de1e07dec79d06f65a6fa147659ad01ee8b8b3"
-}
