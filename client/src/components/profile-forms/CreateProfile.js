@@ -67,9 +67,9 @@ const CreateProfile = ({createProfile, history}) => {
                     <option value="Intern">Intern</option>
                     <option value="Other">Other</option>
                 </select>
-                <small className="form-text"
-                    >Give us an idea of where you are at in your career</small
-                >
+                <small className="form-text">
+                    Give us an idea of where you are at in your career
+                </small>
                 </div>
                 <div className="form-group">
                 <input type="text" placeholder="Company" name="company" value={company} onChange={e => onChange(e)}/>
