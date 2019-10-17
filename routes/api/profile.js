@@ -27,12 +27,12 @@ router.get('/me', auth, async (req, res) => {
 router.post('/', [ auth, [
     check('status', 'Status is required').not().isEmpty(),
     check('skills', 'Skills are required').not().isEmpty(),
-    check('website', 'https/http is required in website field').matches("^(http|https)://", "i"),
+    check('website', 'https/http is required in website field').matches("^(http|https)://" || "", "i"),
     check('twitter', 'https/http is required in twitter field').matches("^(http|https)://", "i"),
-    check('facebook', 'https/http is required in facebook field').matches("^(http|https)://", "i"),
-    check('instagram', 'https/http is required in instagram field').matches("^(http|https)://", "i"),
-    check('youtube', 'https/http is required in youtube field').matches("^(http|https)://", "i"),
-    check('linkedin', 'https/http is required in linkedin field').matches("^(http|https)://", "i")
+    check('facebook', 'https/http is required in facebook field').matches("^(http|https)://" || "", "i"),
+    check('instagram', 'https/http is required in instagram field').matches("^(http|https)://" || "", "i"),
+    check('youtube', 'https/http is required in youtube field').matches("^(http|https)://" || "", "i"),
+    check('linkedin', 'https/http is required in linkedin field').matches("^(http|https)://" || "", "i")
 ]], async (req, res) => {
     const errors = validationResult(req)
     if(!errors.isEmpty()){
