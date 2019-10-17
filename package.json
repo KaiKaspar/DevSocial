@@ -1,7 +1,7 @@
 {
   "name": "kaidev",
   "version": "1.0.0",
-  "description": "DevSocial",
+  "description": "DevoSocio",
   "main": "server.js",
   "scripts": {
     "start": "node server",
